@@ -3,12 +3,17 @@ module.exports = {
     "../../packages/ui/components/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  corePlugins: {
+      preflight: false,
+  },
+  important: '#__next',
   theme: {
     extend: {
       colors: {
         "sktd-theme": {
           white: "#ffffff",
           black: "#000000",
+          gradient: "radial-gradient(34.85% 236.07% at 55.8% -77.5%, #EB695A 0%, #E98462 32.02%, #6370B9 77.96%, #A16499 100%)"
         },
         source: {
           seed: "#6750a4",

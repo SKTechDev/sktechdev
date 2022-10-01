@@ -1,9 +1,14 @@
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 
+import { useEffect } from "react";
+
+import theme from "../theme";
 // Styles
 import "../styles/globals.css";
+import CssBaseline from "@mui/material/CssBaseline";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,6 +21,20 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
+  useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector("#jss-server-side");
+    if (jssStyles) {
+      jssStyles.parentElement?.removeChild(jssStyles);
+    }
+  }, []);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        {<Component {...pageProps} />}
+      </ThemeProvider>
+    </StyledEngineProvider>
+  );
 }
