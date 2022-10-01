@@ -1,10 +1,11 @@
 import { Button } from "ui";
 
-export default function Web() {
+export default function Landing() {
   return (
     <div>
-      <h1>Web</h1>
+      <h1>SKTechDev</h1>
       <Button />
     </div>
   );
 }
+
