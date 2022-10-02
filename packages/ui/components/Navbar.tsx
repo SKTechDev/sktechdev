@@ -19,9 +19,14 @@ export const Navbar = ({
   curPath: string;
 }) => {
   // console.log(curPath);
+  // console.log(curPath === "/");
 
   return (
-    <div className="flex flex-col space-y-4 h-screen w-20 py-14 fixed bg-light-surface1 dark:bg-dark-surface1 bg-opacity-50 text-light-on-surface dark:text-dark-on-surface">
+    <div
+      className={`flex flex-col space-y-4 h-screen top-0 w-20 py-12 fixed bg-light-surface1 dark:bg-dark-surface1 ${
+        curPath === "/" ? "bg-opacity-50" : ""
+      } text-light-on-surface dark:text-dark-on-surface`}
+    >
       <Link href="/">
         <a>
           <div className="flex flex-col">
