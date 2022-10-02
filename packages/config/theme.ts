@@ -29,6 +29,14 @@ const themeConstant = {
     lg: "1280px",
     xl: "1920px",
   },
+  typography: {
+    fontSize: 16,
+  },
+  screens: {
+    sm: "600px",
+    md: "905px",
+    lg: "1440px",
+  },
 };
 
 module.exports = themeConstant;

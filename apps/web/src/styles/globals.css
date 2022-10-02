@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-techdev-gradient-linear {
+    background: rgb(235, 105, 90);
+    background: linear-gradient(
+      90deg,
+      rgba(235, 105, 90, 1) 0%,
+      rgba(233, 132, 98, 1) 35%,
+      rgba(99, 112, 185, 1) 80%,
+      rgba(161, 100, 153, 1) 100%
+    );
+  }
+
+  .bg-techdev-gradient-radial {
+    background: rgb(235, 105, 90);
+    background: radial-gradient(
+      circle,
+      rgba(235, 105, 90, 1) 0%,
+      rgba(233, 132, 98, 1) 35%,
+      rgba(99, 112, 185, 1) 80%,
+      rgba(161, 100, 153, 1) 100%
+    );
+  }
+  .text-techdev-gradient-linear {
+    background: rgb(235, 105, 90);
+    background: linear-gradient(
+      90deg,
+      rgba(235, 105, 90, 1) 0%,
+      rgba(233, 132, 98, 1) 35%,
+      rgba(99, 112, 185, 1) 80%,
+      rgba(161, 100, 153, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-techdev-gradient-radial {
+    background: rgb(235, 105, 90);
+    background: radial-gradient(
+      circle,
+      rgba(235, 105, 90, 1) 0%,
+      rgba(233, 132, 98, 1) 35%,
+      rgba(99, 112, 185, 1) 80%,
+      rgba(161, 100, 153, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
