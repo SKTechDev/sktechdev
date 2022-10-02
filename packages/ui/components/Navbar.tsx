@@ -32,7 +32,7 @@ export const Navbar = ({
                 curPath === "/"
                   ? "drop-shadow-[0px_0px_20px_rgba(233,132,98,0.5)]"
                   : ""
-              } mx-auto`}
+              } mx-auto transition-all duration-300 hover:drop-shadow-[0px_0px_20px_rgba(233,132,98,0.5)]`}
             />
             <span className="text-center">TechDev</span>
           </div>
@@ -42,10 +42,18 @@ export const Navbar = ({
         return (
           <Link key={index} href={`/${item.title.toLocaleLowerCase()}`}>
             <a>
-              <div className="flex flex-col items-center">
-                {curPath.startsWith(item.title.toLowerCase())
-                  ? item.icon.active
-                  : item.icon.inactive}
+              <div className={`flex flex-col items-center `}>
+                <div
+                  className={`flex flex-col justify-center py-1 px-4 ${
+                    curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
+                      ? "rounded-full bg-light-primary-container text-light-on-primary-container dark:bg-dark-primary-container dark:text-dark-on-primary-container"
+                      : ""
+                  } hover:rounded-full hover:bg-light-primary-container hover:text-light-on-primary-container dark:hover:bg-dark-primary-container dark:hover:text-dark-on-primary-container transition-all duration-300`}
+                >
+                  {curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
+                    ? item.icon.active
+                    : item.icon.inactive}
+                </div>
                 <span>{item.title}</span>
               </div>
             </a>
