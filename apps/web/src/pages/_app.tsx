@@ -3,12 +3,8 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
 
-import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-
 // Styles
 import "../styles/globals.css";
-import theme from "../theme";
-import CssBaseline from "@mui/material/CssBaseline";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -30,11 +26,11 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   }, []);
 
   return getLayout(
-    <StyledEngineProvider injectFirst>
-      <CssBaseline />
-      <ThemeProvider theme={theme}>
-        {<Component {...pageProps} />}
-      </ThemeProvider>
-    </StyledEngineProvider>
+    // <StyledEngineProvider injectFirst>
+    //   <CssBaseline />
+    //   <ThemeProvider theme={theme}>
+    <Component {...pageProps} />
+    //   </ThemeProvider>
+    // </StyledEngineProvider>
   );
 }

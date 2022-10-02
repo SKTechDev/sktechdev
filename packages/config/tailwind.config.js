@@ -1,58 +1,108 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
-const themeConstant = require("./theme.ts")
-
 module.exports = {
   content: [
     "../../packages/ui/components/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
   corePlugins: {
-      preflight: false,
+      preflight: true,
   },
-  important: '#__next',
   theme: {
     extend: {
-      colors : {
-        primary: themeConstant.colors.primary,
-        secondary: themeConstant.colors.secondary,
-        surface: themeConstant.colors.surface,
-        error: themeConstant.colors.error,
-        fg: themeConstant.colors.fg,
+      "colors": {
+       "light": {
+        "surface-tint": "#6750a4",
+        "surface-tint-color": "#6750a4",
+        "on-error-container": "#410002",
+        "on-error": "#ffffff",
+        "error-container": "#ffdad6",
+        "on-tertiary-container": "#3c0029",
+        "on-tertiary": "#ffffff",
+        "tertiary-container": "#ffd8e9",
+        "tertiary": "#934172",
+        "shadow": "#000000",
+        "error": "#ba1a1a",
+        "outline": "#7a757f",
+        "on-background": "#1c1b1e",
+        "background": "#fffbff",
+        "inverse-on-surface": "#f4eff4",
+        "inverse-surface": "#313033",
+        "on-surface-variant": "#49454e",
+        "on-surface": "#1c1b1e",
+        "surface-variant": "#e7e0eb",
+        "surface": "#fffbff",
+        "on-secondary-container": "#130463",
+        "on-secondary": "#ffffff",
+        "secondary-container": "#e3dfff",
+        "secondary": "#5954a8",
+        "inverse-primary": "#cfbcff",
+        "on-primary-container": "#22005d",
+        "on-primary": "#ffffff",
+        "primary-container": "#e9ddff",
+        "primary": "#6750a4",
+        "surface1": "#fffbff",
+        "surface2": "#fffbff",
+        "surface3": "#fffbff",
+        "surface4": "#fffbff",
+        "surface5": "#fffbff"
+       },
+       "dark": {
+        "surface-tint": "#cfbcff",
+        "surface-tint-color": "#cfbcff",
+        "on-error-container": "#ffdad6",
+        "on-error": "#690005",
+        "error-container": "#93000a",
+        "on-tertiary-container": "#ffd8e9",
+        "on-tertiary": "#5b1142",
+        "tertiary-container": "#772959",
+        "tertiary": "#ffaed8",
+        "shadow": "#000000",
+        "error": "#ffb4ab",
+        "outline": "#948f99",
+        "on-background": "#e6e1e6",
+        "background": "#1c1b1e",
+        "inverse-on-surface": "#1c1b1e",
+        "inverse-surface": "#e6e1e6",
+        "on-surface-variant": "#cac4cf",
+        "on-surface": "#e6e1e6",
+        "surface-variant": "#49454e",
+        "surface": "#1c1b1e",
+        "on-secondary-container": "#e3dfff",
+        "on-secondary": "#2a2377",
+        "secondary-container": "#413b8e",
+        "secondary": "#c4c0ff",
+        "inverse-primary": "#6750a4",
+        "on-primary-container": "#e9ddff",
+        "on-primary": "#381e72",
+        "primary-container": "#4f378a",
+        "primary": "#cfbcff",
+        "surface1": "#1c1b1e",
+        "surface2": "#1c1b1e",
+        "surface3": "#1c1b1e",
+        "surface4": "#1c1b1e",
+        "surface5": "#1c1b1e"
+       },
       },
-      fontSize: {
-        "2xs": "0.6875rem",
-        xs: "0.75rem",
-        sm: "0.875rem",
-        base: "1rem",
-        lg: "1.375rem",
-        xl: "1.5rem",
-        "2xl": "1.75rem",
-        "3xl": "2rem",
-        "4xl": "2.25rem",
-        "5xl": "2.8125rem",
-        "6xl": "3.5625rem",
+      "fontSize": {
+       "2xs": "0.6875rem",
+       "xs": "0.75rem",
+       "sm": "0.875rem",
+       "base": "1rem",
+       "lg": "1.375rem",
+       "xl": "1.5rem",
+       "2xl": "1.75rem",
+       "3xl": "2rem",
+       "4xl": "2.25rem",
+       "5xl": "2.8125rem",
+       "6xl": "3.5625rem"
       },
-      fontFamily: {
-        roboto: "Roboto",
-        sora: "Sora",
+      "fontFamily": {
+       "roboto": "Roboto",
+       "sora": "Sora"
       },
-      borderRadius: {
-        none: "0",
-      },
-      boxShadow: {
-        DEFAULT:
-          "0px 1px 2px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15)",
-        md: "0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15)",
-        lg: "0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3)",
-        xl: "0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3)",
-        "2xl":
-          "0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3)",
-      },
-    },
-    screens: {
-      ...themeConstant.screens,
-      ...themeConstant.breakpoints,
-    },
+      "borderRadius": {
+       "none": "0"
+      }
+     }
   },
   plugins: [require("@tailwindcss/typography")],
 };
