@@ -5,7 +5,7 @@ export default function Landing() {
   return (
     <>
       <div>
-        <h1 className="text-9xl">
+        <h1 className="text-9xl font-sora">
           <span>SK</span>
           <span className="text-techdev-gradient-radial">TechDev</span>
         </h1>
