@@ -1,3 +1,5 @@
+const themeConstant = require("./theme.ts")
+
 module.exports = {
   content: [
     "../../packages/ui/components/**/*.{ts,tsx}",

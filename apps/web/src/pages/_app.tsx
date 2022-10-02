@@ -1,13 +1,13 @@
 import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
-import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-
 import { useEffect } from "react";
 
-import theme from "../theme";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
+
 // Styles
 import "../styles/globals.css";
+import theme from "../theme";
 import CssBaseline from "@mui/material/CssBaseline";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
