@@ -1,6 +1,7 @@
 import { Layout } from "../helper/layout";
 import type { ReactElement } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Landing() {
   return (
@@ -16,13 +17,21 @@ export default function Landing() {
           <h2 className="text-5xl font-sora leading-[3.55rem] w-[60%]">
             Technology <br /> meets entertainment.
           </h2>
-          <div className="flex space-x-2">
-            <button className="bg-light-primary text-light-on-primary py-2 px-6 rounded-full dark:bg-dark-primary dark:text-dark-on-primary cursor-pointer">
-              <span className=" text-sm font-sora">Join Us</span>
-            </button>
-            <button className="text-light-primary dark:text-dark-primary py-2 px-6 rounded-full cursor-pointer border border-light-outline dark:border-dark-outline">
-              <span className="text-sm font-sora">Learn More</span>
-            </button>
+          <div className="flex space-x-2 mt-6">
+            <Link href={"/contact"}>
+              <a>
+                <button className="bg-light-primary text-light-on-primary py-2 px-6 rounded-full dark:bg-dark-primary dark:text-dark-on-primary cursor-pointer hover:opacity-80 transition-all duration-300">
+                  <span className=" text-sm font-sora">Join Us</span>
+                </button>
+              </a>
+            </Link>
+            <Link href={"/about"}>
+              <a>
+                <button className="text-light-primary dark:text-dark-primary py-2 px-6 rounded-full cursor-pointer border border-light-outline dark:border-dark-outline hover:opacity-80 transition-all duration-300">
+                  <span className="text-sm font-sora">Learn More</span>
+                </button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>
