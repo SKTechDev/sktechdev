@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-light-background text-light-on-background dark:bg-dark-background dark:text-dark-on-background;
+  }
+}
+
 @layer utilities {
   .bg-techdev-gradient-linear {
     background: rgb(235, 105, 90);

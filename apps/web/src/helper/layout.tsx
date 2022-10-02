@@ -57,11 +57,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <div className="bg-light-background text-light-on-background dark:bg-dark-background dark:text-dark-on-background">
+    <>
       <Navbar navItems={defaultNav} curPath={router.asPath} />
-      <div className="flex flex-col min-h-screen ml-24">
+      <div className="flex flex-col min-h-screen ml-24 mt-4">
         <main className="flex-grow font-roboto">{children}</main>
       </div>
-    </div>
+    </>
   );
 }
