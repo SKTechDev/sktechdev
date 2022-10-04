@@ -1,13 +1,13 @@
 // import Techdevlogo from "../assets/techdev logo.svg";
 
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import Link from "next/link";
 
 interface NavbarProps {
   title: string;
   icon: {
-    active: ReactElement;
-    inactive: ReactElement;
+    active: ReactNode;
+    inactive: ReactNode;
   };
 }
 
@@ -55,9 +55,11 @@ export const Navbar = ({
                       : ""
                   } hover:rounded-full hover:bg-light-primary-container hover:text-light-on-primary-container dark:hover:bg-dark-primary-container dark:hover:text-dark-on-primary-container transition-all duration-300`}
                 >
-                  {curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
-                    ? item.icon.active
-                    : item.icon.inactive}
+                  <>
+                    {curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
+                      ? item.icon.active
+                      : item.icon.inactive}
+                  </>
                 </div>
                 <span>{item.title}</span>
               </div>
