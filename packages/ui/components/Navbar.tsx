@@ -18,12 +18,11 @@ export const Navbar = ({
   navItems: NavbarProps[];
   curPath: string;
 }) => {
-  // console.log(curPath);
-  // console.log(curPath === "/");
+  // TODO: Add check for mobile to treat navbar as a drawer
 
   return (
     <div
-      className={`flex flex-col space-y-4 h-screen top-0 w-20 py-12 fixed bg-light-surface1 dark:bg-dark-surface1 ${
+      className={`flex flex-col space-y-4 h-screen top-0 w-20 py-12 fixed font-medium text-xs leading-4 tracking-wider bg-light-surface1 dark:bg-dark-surface1 ${
         curPath === "/" ? "bg-opacity-50" : ""
       } text-light-on-surface dark:text-dark-on-surface`}
     >
@@ -37,7 +36,7 @@ export const Navbar = ({
                 curPath === "/"
                   ? "drop-shadow-[0px_0px_20px_rgba(233,132,98,0.5)]"
                   : ""
-              } mx-auto transition-all duration-300 hover:drop-shadow-[0px_0px_20px_rgba(233,132,98,0.5)]`}
+              } mx-auto`}
             />
             <span className="text-center">TechDev</span>
           </div>
@@ -53,7 +52,7 @@ export const Navbar = ({
                     curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
                       ? "rounded-full bg-light-primary-container text-light-on-primary-container dark:bg-dark-primary-container dark:text-dark-on-primary-container"
                       : ""
-                  } hover:rounded-full hover:bg-light-primary-container hover:text-light-on-primary-container dark:hover:bg-dark-primary-container dark:hover:text-dark-on-primary-container transition-all duration-300`}
+                  } transition-all duration-300`}
                 >
                   <>
                     {curPath.startsWith(`/${item.title.toLocaleLowerCase()}`)
