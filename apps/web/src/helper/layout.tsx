@@ -2,18 +2,16 @@ import { Navbar } from "ui";
 import { useRouter } from "next/router";
 
 // icon
-import {
-  InfoRounded,
-  InfoOutlined,
-  ComputerOutlined,
-  ComputerRounded,
-  ContactsOutlined,
-  ContactsRounded,
-  PhotoLibraryOutlined,
-  PhotoLibraryRounded,
-  StoreOutlined,
-  StoreRounded,
-} from "@mui/icons-material";
+import InfoIcon from "@mui/icons-material/Info";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import ComputerIcon from "@mui/icons-material/Computer";
+import ComputerOutlinedIcon from "@mui/icons-material/ComputerOutlined";
+import ContactsIcon from "@mui/icons-material/Contacts";
+import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
+import PhotoLibraryIcon from "@mui/icons-material/PhotoLibrary";
+import PhotoLibraryOutlinedIcon from "@mui/icons-material/PhotoLibraryOutlined";
+import StoreIcon from "@mui/icons-material/Store";
+import StoreOutlinedIcon from "@mui/icons-material/StoreOutlined";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -22,36 +20,36 @@ export function Layout({ children }: { children: React.ReactNode }) {
     {
       title: "About",
       icon: {
-        active: <InfoRounded />,
-        inactive: <InfoOutlined />,
+        active: <InfoIcon />,
+        inactive: <InfoOutlinedIcon />,
       },
     },
     {
       title: "Projects",
       icon: {
-        active: <ComputerRounded />,
-        inactive: <ComputerOutlined />,
+        active: <ComputerIcon />,
+        inactive: <ComputerOutlinedIcon />,
       },
     },
     {
       title: "Contact",
       icon: {
-        active: <ContactsRounded />,
-        inactive: <ContactsOutlined />,
+        active: <ContactsIcon />,
+        inactive: <ContactsOutlinedIcon />,
       },
     },
     {
       title: "Gallery",
       icon: {
-        active: <PhotoLibraryRounded />,
-        inactive: <PhotoLibraryOutlined />,
+        active: <PhotoLibraryIcon />,
+        inactive: <PhotoLibraryOutlinedIcon />,
       },
     },
     {
       title: "Merch",
       icon: {
-        active: <StoreRounded />,
-        inactive: <StoreOutlined />,
+        active: <StoreIcon />,
+        inactive: <StoreOutlinedIcon />,
       },
     },
   ];
