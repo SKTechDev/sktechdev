@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Landing() {
   return (
-    <div className="flex flex-col gap-9 h-[calc(100vh-6rem)] justify-between content-start">
+    <div className="flex flex-col gap-9 h-[calc(100vh-14rem)] justify-between content-start">
       <div>
-        <h1 className="text-[10rem] font-sora -tracking-[11.75px] break-normal">
+        <h1 className="text-[10rem] font-sora -tracking-[11.75px] break-normal leading-[8rem]">
           <span>SK</span>
           <wbr />
           <span className="text-techdev-gradient-radial font-bold">
