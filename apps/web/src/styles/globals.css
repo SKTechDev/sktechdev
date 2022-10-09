@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply overflow-x-hidden;
+  }
+
   body {
     @apply bg-light-background text-light-on-background dark:bg-dark-background dark:text-dark-on-background;
   }
