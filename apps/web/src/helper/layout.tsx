@@ -57,8 +57,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar navItems={defaultNav} curPath={router.asPath} />
-      <div className="flex flex-col m-28">
-        <main className="flex-grow font-roboto">{children}</main>
+      <div className="flex flex-row justify-center p-28">
+        <main className="flex-grow font-roboto max-w-7xl">{children}</main>
       </div>
     </>
   );
